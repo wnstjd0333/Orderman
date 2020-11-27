@@ -43,16 +43,16 @@
         <!--オーダー-->
         <scene sceneID="zqu-8a-SC7">
             <objects>
-                <viewController id="8fc-Os-N7f" customClass="OrderViewController" customModule="GreateKolkata" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8fc-Os-N7f" customClass="OrderViewController" customModule="Orderman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0qG-Ll-PhI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qyk-PT-GA4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="180" width="414" height="633"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="169" id="SIw-wA-AVO" customClass="OrderCell" customModule="GreateKolkata" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="169" id="SIw-wA-AVO" customClass="OrderCell" customModule="Orderman" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="169"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SIw-wA-AVO" id="6Ud-SZ-PZP">
@@ -60,7 +60,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mg2-y9-OUf">
-                                                    <rect key="frame" x="40" y="74" width="42" height="21"/>
+                                                    <rect key="frame" x="40" y="74.5" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -82,14 +82,132 @@
                                     <outlet property="delegate" destination="8fc-Os-N7f" id="tnj-5D-SLF"/>
                                 </connections>
                             </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNw-NM-FJU">
+                                <rect key="frame" x="0.0" y="140" width="414" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="grw-8U-B4h">
+                                        <rect key="frame" x="16" y="0.0" width="697" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcR-G6-QH8">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="171" id="5rm-ve-OPW"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="カレーセット Curry Set"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="menuButtonTouced:" destination="8fc-Os-N7f" eventType="touchUpInside" id="jrJ-v3-ZAT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuP-Db-rfW">
+                                                <rect key="frame" x="187" y="0.0" width="87" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="9HZ-rn-Z9v"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="カレー単品"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="menuButtonTouced:" destination="8fc-Os-N7f" eventType="touchUpInside" id="Ces-gF-4wr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HL2-JM-Rm3">
+                                                <rect key="frame" x="290" y="0.0" width="90" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="1r1-K2-RmH"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="ライス Rice"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="menuButtonTouced:" destination="8fc-Os-N7f" eventType="touchUpInside" id="RlB-iE-UEq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grQ-7p-5zB">
+                                                <rect key="frame" x="396" y="0.0" width="81" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="4kr-wF-rhe"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="ナン Naan"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="menuButtonTouced:" destination="8fc-Os-N7f" eventType="touchUpInside" id="W2r-BR-Q7I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3R-hC-0gH">
+                                                <rect key="frame" x="493" y="0.0" width="98" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="DJX-Z1-cZ8"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="サラダ Salad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="menuButtonTouced:" destination="8fc-Os-N7f" eventType="touchUpInside" id="JW2-G2-udd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeL-Tq-DgW">
+                                                <rect key="frame" x="607" y="0.0" width="90" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="un3-c4-g1D"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="サイド Side"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="menuButtonTouced:" destination="8fc-Os-N7f" eventType="touchUpInside" id="lP6-Gr-drh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="grw-8U-B4h" firstAttribute="top" secondItem="vNw-NM-FJU" secondAttribute="top" id="2Ym-TG-skC"/>
+                                    <constraint firstAttribute="height" constant="40" id="G8h-JW-6Bh"/>
+                                    <constraint firstItem="grw-8U-B4h" firstAttribute="leading" secondItem="vNw-NM-FJU" secondAttribute="leading" constant="16" id="tBu-kY-nzO"/>
+                                    <constraint firstAttribute="trailing" secondItem="grw-8U-B4h" secondAttribute="trailing" constant="16" id="vAQ-Mh-hue"/>
+                                    <constraint firstAttribute="bottom" secondItem="grw-8U-B4h" secondAttribute="bottom" id="yw5-ot-fAq"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BPY-j3-yH9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Qyk-PT-GA4" firstAttribute="top" secondItem="BPY-j3-yH9" secondAttribute="top" id="Kbo-dq-dLb"/>
-                            <constraint firstItem="BPY-j3-yH9" firstAttribute="bottom" secondItem="Qyk-PT-GA4" secondAttribute="bottom" id="URc-Mg-aM1"/>
-                            <constraint firstItem="BPY-j3-yH9" firstAttribute="trailing" secondItem="Qyk-PT-GA4" secondAttribute="trailing" id="rWE-Mb-lZ5"/>
-                            <constraint firstItem="Qyk-PT-GA4" firstAttribute="leading" secondItem="BPY-j3-yH9" secondAttribute="leading" id="thU-1D-Hc0"/>
+                            <constraint firstItem="Qyk-PT-GA4" firstAttribute="bottom" secondItem="BPY-j3-yH9" secondAttribute="bottom" id="9q7-vd-jsy"/>
+                            <constraint firstItem="vNw-NM-FJU" firstAttribute="top" secondItem="BPY-j3-yH9" secondAttribute="top" id="NWA-Zc-AEm"/>
+                            <constraint firstItem="vNw-NM-FJU" firstAttribute="leading" secondItem="BPY-j3-yH9" secondAttribute="leading" id="V7i-vN-1PC"/>
+                            <constraint firstItem="Qyk-PT-GA4" firstAttribute="trailing" secondItem="BPY-j3-yH9" secondAttribute="trailing" id="g9P-m0-aO0"/>
+                            <constraint firstItem="Qyk-PT-GA4" firstAttribute="leading" secondItem="BPY-j3-yH9" secondAttribute="leading" id="q0p-fe-V3r"/>
+                            <constraint firstItem="BPY-j3-yH9" firstAttribute="trailing" secondItem="vNw-NM-FJU" secondAttribute="trailing" id="qqI-dD-uYo"/>
+                            <constraint firstItem="Qyk-PT-GA4" firstAttribute="top" secondItem="vNw-NM-FJU" secondAttribute="bottom" id="rr2-nK-4vd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="オーダー" id="52x-LE-gP5"/>

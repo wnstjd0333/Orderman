@@ -10,12 +10,22 @@ import UIKit
 class OrderViewController: UIViewController {
     
     let orderStrings = ["テイクアウト","店内"]
+    var clickedButton = UIButton()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+    }
+    
+    @IBAction func menuButtonTouced(_ sender: UIButton) {
+        clickedButton.backgroundColor = .white
+        clickedButton.tintColor = .black
+        
+        sender.backgroundColor = .black
+        sender.tintColor = .white
+        clickedButton = sender
     }
 }
 
