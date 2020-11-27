@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3D2506D2F0AD2BEC400C8D /* Pods_OrdermanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */; };
+		4FDA355F0C032434F1C34F8E /* Pods_Orderman_OrdermanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */; };
+		D41BFA9E90DC6C578385D27D /* Pods_Orderman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */; };
 		F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72BE2570A89F005EF62B /* AppDelegate.swift */; };
 		F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C02570A89F005EF62B /* SceneDelegate.swift */; };
 		F79E72C32570A89F005EF62B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C22570A89F005EF62B /* OrderViewController.swift */; };
@@ -36,6 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E3B0ABD0DBE9E29AB03AD6A /* Pods-OrdermanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrdermanTests.debug.xcconfig"; path = "Target Support Files/Pods-OrdermanTests/Pods-OrdermanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2450DA1FC3171D035C0D0CA2 /* Pods-Orderman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman.debug.xcconfig"; path = "Target Support Files/Pods-Orderman/Pods-Orderman.debug.xcconfig"; sourceTree = "<group>"; };
+		336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrdermanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderman_OrdermanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA37EDD823C5ACDACEDEECC8 /* Pods-OrdermanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrdermanTests.release.xcconfig"; path = "Target Support Files/Pods-OrdermanTests/Pods-OrdermanTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFA048AA6BFC8A114205FA45 /* Pods-Orderman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman.release.xcconfig"; path = "Target Support Files/Pods-Orderman/Pods-Orderman.release.xcconfig"; sourceTree = "<group>"; };
+		E542E0D5C56BC51718691C1D /* Pods-Orderman-OrdermanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman-OrdermanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE924F98CDBC38440E663834 /* Pods-Orderman-OrdermanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman-OrdermanUITests.release.xcconfig"; path = "Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F79E72BB2570A89F005EF62B /* Orderman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79E72BE2570A89F005EF62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79E72C02570A89F005EF62B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41BFA9E90DC6C578385D27D /* Pods_Orderman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3D2506D2F0AD2BEC400C8D /* Pods_OrdermanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDA355F0C032434F1C34F8E /* Pods_Orderman_OrdermanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19735314068F79852E418AF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */,
+				383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */,
+				336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DA2523A90E6761B71FF53B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2450DA1FC3171D035C0D0CA2 /* Pods-Orderman.debug.xcconfig */,
+				CFA048AA6BFC8A114205FA45 /* Pods-Orderman.release.xcconfig */,
+				E542E0D5C56BC51718691C1D /* Pods-Orderman-OrdermanUITests.debug.xcconfig */,
+				EE924F98CDBC38440E663834 /* Pods-Orderman-OrdermanUITests.release.xcconfig */,
+				1E3B0ABD0DBE9E29AB03AD6A /* Pods-OrdermanTests.debug.xcconfig */,
+				BA37EDD823C5ACDACEDEECC8 /* Pods-OrdermanTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F79E72B22570A89F005EF62B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +124,8 @@
 				F79E72D72570A8AA005EF62B /* OrdermanTests */,
 				F79E72E22570A8AA005EF62B /* OrdermanUITests */,
 				F79E72BC2570A89F005EF62B /* Products */,
+				3DA2523A90E6761B71FF53B4 /* Pods */,
+				19735314068F79852E418AF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F79E72E82570A8AA005EF62B /* Build configuration list for PBXNativeTarget "Orderman" */;
 			buildPhases = (
+				791F742CA82E7F45BDFB32A2 /* [CP] Check Pods Manifest.lock */,
 				F79E72B72570A89F005EF62B /* Sources */,
 				F79E72B82570A89F005EF62B /* Frameworks */,
 				F79E72B92570A89F005EF62B /* Resources */,
+				F84F1AB1E42CA51B8FE9DC39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F79E72EB2570A8AA005EF62B /* Build configuration list for PBXNativeTarget "OrdermanTests" */;
 			buildPhases = (
+				AEDA9E11C3181E0E1A867C9C /* [CP] Check Pods Manifest.lock */,
 				F79E72D02570A8AA005EF62B /* Sources */,
 				F79E72D12570A8AA005EF62B /* Frameworks */,
 				F79E72D22570A8AA005EF62B /* Resources */,
@@ -197,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F79E72EE2570A8AA005EF62B /* Build configuration list for PBXNativeTarget "OrdermanUITests" */;
 			buildPhases = (
+				D0FD15215D4C112A0D2254B6 /* [CP] Check Pods Manifest.lock */,
 				F79E72DB2570A8AA005EF62B /* Sources */,
 				F79E72DC2570A8AA005EF62B /* Frameworks */,
 				F79E72DD2570A8AA005EF62B /* Resources */,
+				F6EECD9A5F2C0DC37C92B972 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +325,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		791F742CA82E7F45BDFB32A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Orderman-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEDA9E11C3181E0E1A867C9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrdermanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0FD15215D4C112A0D2254B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Orderman-OrdermanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6EECD9A5F2C0DC37C92B972 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F84F1AB1E42CA51B8FE9DC39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orderman/Pods-Orderman-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orderman/Pods-Orderman-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Orderman/Pods-Orderman-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F79E72B72570A89F005EF62B /* Sources */ = {
@@ -461,6 +610,7 @@
 		};
 		F79E72E92570A8AA005EF62B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2450DA1FC3171D035C0D0CA2 /* Pods-Orderman.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +630,7 @@
 		};
 		F79E72EA2570A8AA005EF62B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFA048AA6BFC8A114205FA45 /* Pods-Orderman.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,6 +650,7 @@
 		};
 		F79E72EC2570A8AA005EF62B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E3B0ABD0DBE9E29AB03AD6A /* Pods-OrdermanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +673,7 @@
 		};
 		F79E72ED2570A8AA005EF62B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA37EDD823C5ACDACEDEECC8 /* Pods-OrdermanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +696,7 @@
 		};
 		F79E72EF2570A8AA005EF62B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E542E0D5C56BC51718691C1D /* Pods-Orderman-OrdermanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +717,7 @@
 		};
 		F79E72F02570A8AA005EF62B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE924F98CDBC38440E663834 /* Pods-Orderman-OrdermanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

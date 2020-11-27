@@ -6,6 +6,8 @@ target 'Orderman' do
   use_frameworks!
 
   # Pods for Orderman
+  pod 'RealmSwift'  
+
 
   target 'OrdermanTests' do
     inherit! :search_paths
