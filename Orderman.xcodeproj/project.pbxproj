@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0C3D2506D2F0AD2BEC400C8D /* Pods_OrdermanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */; };
 		4FDA355F0C032434F1C34F8E /* Pods_Orderman_OrdermanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */; };
 		D41BFA9E90DC6C578385D27D /* Pods_Orderman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */; };
+		F76EB73225753CEA00123E67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EB73125753CEA00123E67 /* MainViewController.swift */; };
 		F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72BE2570A89F005EF62B /* AppDelegate.swift */; };
 		F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C02570A89F005EF62B /* SceneDelegate.swift */; };
 		F79E72C32570A89F005EF62B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C22570A89F005EF62B /* OrderViewController.swift */; };
@@ -48,6 +49,7 @@
 		CFA048AA6BFC8A114205FA45 /* Pods-Orderman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman.release.xcconfig"; path = "Target Support Files/Pods-Orderman/Pods-Orderman.release.xcconfig"; sourceTree = "<group>"; };
 		E542E0D5C56BC51718691C1D /* Pods-Orderman-OrdermanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman-OrdermanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE924F98CDBC38440E663834 /* Pods-Orderman-OrdermanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman-OrdermanUITests.release.xcconfig"; path = "Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F76EB73125753CEA00123E67 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F79E72BB2570A89F005EF62B /* Orderman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79E72BE2570A89F005EF62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79E72C02570A89F005EF62B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 				1E3B0ABD0DBE9E29AB03AD6A /* Pods-OrdermanTests.debug.xcconfig */,
 				BA37EDD823C5ACDACEDEECC8 /* Pods-OrdermanTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F79E72C22570A89F005EF62B /* OrderViewController.swift */,
+				F76EB73125753CEA00123E67 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -438,6 +440,7 @@
 				F79E72C92570A89F005EF62B /* GreateKolkata.xcdatamodeld in Sources */,
 				F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */,
 				F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */,
+				F76EB73225753CEA00123E67 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
