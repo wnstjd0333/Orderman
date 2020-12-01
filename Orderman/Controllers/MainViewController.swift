@@ -9,21 +9,134 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    private var manNumber = 0
+    private var womanNumber = 0
+    
+    @IBOutlet private weak var orderWayLabel: UILabel!
+    @IBOutlet private weak var orderManLabel: UILabel!
+    @IBOutlet private weak var orderWomanLabel: UILabel!
+    @IBOutlet private weak var segmentControl: UISegmentedControl!
+    @IBOutlet private weak var manMinusButton: UIButton!
+    @IBOutlet private weak var manPlusButton: UIButton!
+    @IBOutlet private weak var manNumberLabel: UILabel!
+    @IBOutlet private weak var womenMinusButton: UIButton!
+    @IBOutlet private weak var womanPlusButton: UIButton!
+    @IBOutlet private weak var womanNumberLabel: UILabel!
+    @IBOutlet private weak var tableNumberField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func segmentTouched(_ sender: UISegmentedControl) {
+        orderWayLabel.text = sender.titleForSegment(at: sender.selectedSegmentIndex)
+        orderWayLabel.textColor = .black
+        tableNumberField.isHidden = true
+        tableNumberField.text = ""
+        
+        if sender.selectedSegmentIndex == 0 {
+            tableNumberField.isHidden = false
+        }
     }
-    */
+    
+    @IBAction func numberTouched(_ sender: UIButton) {
+        tableNumberField.text = sender.title(for: .normal)
+    }
+    
+    @IBAction func peopleCountButtonTouched(_ sender: UIButton) {
+        if sender == manMinusButton, manNumber > 0 {
+            manNumber -= 1
+            manNumberLabel.text = String(manNumber)
+        }
+        
+        if sender == womenMinusButton, womanNumber > 0 {
+            womanNumber -= 1
+            womanNumberLabel.text = String(womanNumber)
+        }
+        
+        if sender == manPlusButton {
+            manNumber += 1
+            manNumberLabel.text = String(manNumber)
+        }
+        
+        if sender == womanPlusButton {
+            womanNumber += 1
+            womanNumberLabel.text = String(womanNumber)
+        }
+        
+        if orderWayLabel.text == "注文種類＆人数" {
+            orderWayLabel.text = segmentControl.titleForSegment(at: segmentControl.selectedSegmentIndex)
+            orderWayLabel.textColor = .black
+        }
+        
+        if sender == manMinusButton || sender == manPlusButton {
+            orderManLabel.text = "男 \(manNumber)"
+            orderManLabel.isHidden = false
+            
+            if manNumber == 0 {
+                orderManLabel.isHidden = true
+            }
+        } else {
+            orderWomanLabel.text = "女 \(womanNumber)"
+            orderWomanLabel.isHidden = false
+            if womanNumber == 0 {
+                orderWomanLabel.isHidden = true
+            }
+        }
+    }
 
+    @IBAction func clearButtonTouched(_ sender: UIButton) {
+        orderWayLabel.text = "注文種類＆人数"
+        orderWayLabel.textColor = .opaqueSeparator
+        orderManLabel.isHidden = true
+        orderWomanLabel.isHidden = true
+        segmentControl.selectedSegmentIndex = 0
+        manNumberLabel.text = "0"
+        womanNumberLabel.text = "0"
+        tableNumberField.isHidden = false
+        manNumber = 0
+        womanNumber = 0
+        tableNumberField.text = ""
+    }
+    
+    @IBAction func orderButtonTouched(_ sender: UIButton) {
+        let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        tabBarController.modalPresentationStyle = .fullScreen
+ 
+        let orderVC = tabBarController.viewControllers?[0].children[0] as! OrderViewController
+        orderVC.delegate = self
+
+        present(tabBarController, animated: false, completion: nil)
+    }
+}
+
+extension MainViewController: OrderViewControllerDelegate {
+    func getOrderTitle() -> String {
+        var entireLabel = ""
+        if let tableField = tableNumberField.text,
+           var orderLabel = orderWayLabel.text,
+           var manLabel = orderManLabel.text,
+           var womanLabel = orderWomanLabel.text {
+            if tableField != "" {
+                entireLabel.append("\(tableField) ")
+            }
+            
+            if orderLabel == "注文種類＆人数" {
+                orderLabel = "種類未選択"
+            }
+            
+            if orderManLabel.isHidden == true {
+                manLabel = ""
+            }
+            
+            if orderWomanLabel.isHidden == true {
+                womanLabel = ""
+            }
+            
+            entireLabel.append(orderLabel)
+            entireLabel.append(" \(manLabel)")
+            entireLabel.append(" \(womanLabel)")
+        }
+        return entireLabel
+    }
 }

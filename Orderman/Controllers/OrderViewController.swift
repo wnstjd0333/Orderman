@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol OrderViewControllerDelegate: class {
+    func getOrderTitle() -> String
+}
+
 class OrderViewController: UIViewController {
     
     private var clickedButton = UIButton()
     
     var menuButtonArray = [UIButton]()
+    weak var delegate: OrderViewControllerDelegate?
     
     let sectionTitles = ["カレーセット Curry Set", "カレー単品", "ライス Rice", "ナン Naan", "サラダ Salad", "サイド Side"]
     let array1 = ["カレーナンセット Curry & Naan Set", "ダブルカレーナンセット Double Curry Set"]
@@ -36,6 +41,8 @@ class OrderViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationItem.title = delegate?.getOrderTitle()
+        
         for (_,title) in sectionTitles.enumerated() {
             let button = UIButton()
             button.setTitle(title, for: .normal)
@@ -54,6 +61,10 @@ class OrderViewController: UIViewController {
     
     @objc func munuButtonTouched(_ sender: UIButton) {
         
+    }
+
+    @IBAction func backButtonTouched(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func menuButtonTouced(_ sender: UIButton) {

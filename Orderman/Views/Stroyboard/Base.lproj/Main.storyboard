@@ -44,7 +44,7 @@
         <!--オーダー-->
         <scene sceneID="zqu-8a-SC7">
             <objects>
-                <viewController id="8fc-Os-N7f" customClass="OrderViewController" customModule="Orderman" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderVC" id="8fc-Os-N7f" customClass="OrderViewController" customModule="Orderman" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0qG-Ll-PhI">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,20 @@
                             <constraint firstItem="Qyk-PT-GA4" firstAttribute="trailing" secondItem="BPY-j3-yH9" secondAttribute="trailing" id="w83-zO-Kjt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="オーダー" id="52x-LE-gP5"/>
+                    <navigationItem key="navigationItem" title="オーダー" id="52x-LE-gP5">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="ord-JI-1bg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lAU-8p-giQ">
+                                <rect key="frame" x="20" y="11" width="86.666666666666671" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" Back" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="8fc-Os-N7f" eventType="touchUpInside" id="VeA-y5-PrX"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuStackView" destination="grw-8U-B4h" id="QD5-OQ-u5v"/>
                         <outlet property="scrollView" destination="vNw-NM-FJU" id="JRh-nz-6aF"/>
@@ -132,7 +145,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Vhk-aa-KoU">
             <objects>
-                <tabBarController id="Hgm-a8-T8M" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="Hgm-a8-T8M" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Irx-oG-PPY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -163,13 +176,6 @@
                                     <constraint firstAttribute="width" secondItem="dQl-de-SSG" secondAttribute="height" multiplier="2:1" id="kg6-gg-5xv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注文種類＆人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NI-KR-T3m">
-                                <rect key="frame" x="125.33333333333333" y="232.33333333333334" width="177.33333333333337" height="30.000000000000028"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TaJ-Z5-U2a">
                                 <rect key="frame" x="82.333333333333343" y="341.33333333333331" width="263.33333333333326" height="24"/>
                                 <subviews>
@@ -183,6 +189,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="minus.circle" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="peopleCountButtonTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="Uj3-Tl-OgZ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="男" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVq-Nt-2r8">
                                                 <rect key="frame" x="34.333333333333343" y="0.0" width="20.666666666666671" height="24"/>
@@ -202,6 +211,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="peopleCountButtonTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="dw1-hX-DrI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -215,6 +227,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="minus.circle" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="peopleCountButtonTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="8wX-b4-pCn"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yR-7G-iiB">
                                                 <rect key="frame" x="34.333333333333314" y="0.0" width="20.666666666666671" height="24"/>
@@ -234,6 +249,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="peopleCountButtonTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="QDn-pq-Vmf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -246,9 +264,16 @@
                                     <segment title="Take Out"/>
                                     <segment title="配達 Delivery"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentTouched:" destination="ie0-Jx-ec3" eventType="valueChanged" id="slt-z8-jek"/>
+                                </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Table Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPV-BF-CR7">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Table Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPV-BF-CR7">
                                 <rect key="frame" x="155" y="389.33333333333331" width="118.33333333333331" height="34"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -272,6 +297,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="ocT-8U-DtJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yj9-KS-9KF">
                                                 <rect key="frame" x="60" y="0.0" width="50" height="50"/>
@@ -283,6 +311,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="tBv-dq-160"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v26-3j-OcV">
                                                 <rect key="frame" x="120" y="0.0" width="50" height="50"/>
@@ -294,6 +325,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="k5E-kj-exQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0q-if-r1Y">
                                                 <rect key="frame" x="180" y="0.0" width="50" height="50"/>
@@ -305,6 +339,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="ko8-n6-sMr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GY-Ld-hct">
                                                 <rect key="frame" x="240" y="0.0" width="50" height="50"/>
@@ -316,6 +353,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="zFe-hK-U9z"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -332,6 +372,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="XvH-O2-1Nq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5O-qO-C4D">
                                                 <rect key="frame" x="60" y="0.0" width="50" height="50"/>
@@ -343,6 +386,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="w0Q-kL-R17"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdt-UR-o0C">
                                                 <rect key="frame" x="120" y="0.0" width="50" height="50"/>
@@ -354,6 +400,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="1y5-QI-Syh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wr-EH-pTe">
                                                 <rect key="frame" x="180" y="0.0" width="50" height="50"/>
@@ -365,6 +414,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="0I5-mH-8dN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydq-Vr-XFM">
                                                 <rect key="frame" x="240" y="0.0" width="50" height="50"/>
@@ -376,6 +428,9 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="vkF-dF-Okf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -398,6 +453,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearButtonTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="y0g-LT-VDa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-Yw-wCf">
                                         <rect key="frame" x="160" y="0.0" width="140" height="40"/>
@@ -409,30 +467,70 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="orderButtonTouched:" destination="ie0-Jx-ec3" eventType="touchUpInside" id="ZhT-8C-g1K"/>
+                                        </connections>
                                     </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ODm-Cu-I7X">
+                                <rect key="frame" x="125.33333333333333" y="232.33333333333334" width="177.33333333333337" height="30.000000000000028"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注文種類＆人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NI-KR-T3m">
+                                        <rect key="frame" x="0.0" y="0.0" width="177.33333333333334" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQj-tL-MRq">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFq-Qb-ZMm">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kcs-nx-jA8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0NI-KR-T3m" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="2oC-sk-bfP"/>
                             <constraint firstItem="dQl-de-SSG" firstAttribute="height" secondItem="IYK-xO-3FT" secondAttribute="height" multiplier="1:7" id="6Iw-RC-9KY"/>
                             <constraint firstItem="TaJ-Z5-U2a" firstAttribute="top" secondItem="wU2-3c-7eh" secondAttribute="bottom" constant="24" id="8Gx-ff-fej"/>
                             <constraint firstItem="dQl-de-SSG" firstAttribute="top" secondItem="Kcs-nx-jA8" secondAttribute="top" constant="32" id="Arj-XC-hYP"/>
                             <constraint firstItem="EPV-BF-CR7" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="Hph-sO-5kk"/>
                             <constraint firstItem="mKD-wd-Mib" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="I1I-8V-9LN"/>
+                            <constraint firstItem="wU2-3c-7eh" firstAttribute="top" secondItem="ODm-Cu-I7X" secondAttribute="bottom" constant="24" id="Jgu-Xt-bIJ"/>
                             <constraint firstItem="mKD-wd-Mib" firstAttribute="top" secondItem="EPV-BF-CR7" secondAttribute="bottom" constant="24" id="NcT-Bb-o3H"/>
                             <constraint firstItem="dQl-de-SSG" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="OL6-8i-auo"/>
                             <constraint firstItem="TaJ-Z5-U2a" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="VQL-9d-447"/>
                             <constraint firstItem="jYB-wf-Mcx" firstAttribute="top" secondItem="mKD-wd-Mib" secondAttribute="bottom" constant="24" id="Yhd-yN-WWv"/>
                             <constraint firstItem="wU2-3c-7eh" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="bdI-x8-UbL"/>
-                            <constraint firstItem="wU2-3c-7eh" firstAttribute="top" secondItem="0NI-KR-T3m" secondAttribute="bottom" constant="24" id="eLO-eL-iJ8"/>
-                            <constraint firstItem="0NI-KR-T3m" firstAttribute="top" secondItem="dQl-de-SSG" secondAttribute="bottom" constant="24" id="lhV-hF-59q"/>
+                            <constraint firstItem="ODm-Cu-I7X" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="gza-Vh-Paa"/>
+                            <constraint firstItem="ODm-Cu-I7X" firstAttribute="top" secondItem="dQl-de-SSG" secondAttribute="bottom" constant="24" id="hl0-ud-PtW"/>
                             <constraint firstItem="EPV-BF-CR7" firstAttribute="top" secondItem="TaJ-Z5-U2a" secondAttribute="bottom" constant="24" id="o98-mU-q07"/>
                             <constraint firstItem="jYB-wf-Mcx" firstAttribute="centerX" secondItem="IYK-xO-3FT" secondAttribute="centerX" id="tJ6-tD-c5f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="manMinusButton" destination="FWa-dl-jkG" id="n6s-9b-0fi"/>
+                        <outlet property="manNumberLabel" destination="QWd-6r-Lkr" id="IhP-5Q-mf4"/>
+                        <outlet property="manPlusButton" destination="avs-M4-vVa" id="aXd-wg-HNi"/>
+                        <outlet property="orderManLabel" destination="dQj-tL-MRq" id="pNM-IE-75U"/>
+                        <outlet property="orderWayLabel" destination="0NI-KR-T3m" id="B8u-jN-idY"/>
+                        <outlet property="orderWomanLabel" destination="OFq-Qb-ZMm" id="Ycv-Kv-MYa"/>
+                        <outlet property="segmentControl" destination="wU2-3c-7eh" id="AVF-HP-0Sb"/>
+                        <outlet property="tableNumberField" destination="EPV-BF-CR7" id="sxA-63-Q1d"/>
+                        <outlet property="womanNumberLabel" destination="jrc-Ed-iDW" id="5fU-wC-XPy"/>
+                        <outlet property="womanPlusButton" destination="DFF-b9-55E" id="2o8-uz-g8g"/>
+                        <outlet property="womenMinusButton" destination="G8C-2t-raq" id="eWd-Ck-VmZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJJ-Gp-I5R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,11 +596,15 @@
     </scenes>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="minus.circle" catalog="system" width="128" height="121"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="printer" catalog="system" width="128" height="111"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
