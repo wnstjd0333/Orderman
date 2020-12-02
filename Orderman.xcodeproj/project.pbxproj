@@ -10,7 +10,9 @@
 		0C3D2506D2F0AD2BEC400C8D /* Pods_OrdermanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */; };
 		4FDA355F0C032434F1C34F8E /* Pods_Orderman_OrdermanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */; };
 		D41BFA9E90DC6C578385D27D /* Pods_Orderman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */; };
-		F76EB73225753CEA00123E67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EB73125753CEA00123E67 /* MainViewController.swift */; };
+		F76EB73225753CEA00123E67 /* OrderStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EB73125753CEA00123E67 /* OrderStartViewController.swift */; };
+		F781C2F4257769DC0005D3E8 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */; };
+		F781C30125776E900005D3E8 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F781C30025776E900005D3E8 /* Order.storyboard */; };
 		F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72BE2570A89F005EF62B /* AppDelegate.swift */; };
 		F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C02570A89F005EF62B /* SceneDelegate.swift */; };
 		F79E72C32570A89F005EF62B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C22570A89F005EF62B /* OrderViewController.swift */; };
@@ -49,7 +51,9 @@
 		CFA048AA6BFC8A114205FA45 /* Pods-Orderman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman.release.xcconfig"; path = "Target Support Files/Pods-Orderman/Pods-Orderman.release.xcconfig"; sourceTree = "<group>"; };
 		E542E0D5C56BC51718691C1D /* Pods-Orderman-OrdermanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman-OrdermanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE924F98CDBC38440E663834 /* Pods-Orderman-OrdermanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman-OrdermanUITests.release.xcconfig"; path = "Target Support Files/Pods-Orderman-OrdermanUITests/Pods-Orderman-OrdermanUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F76EB73125753CEA00123E67 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F76EB73125753CEA00123E67 /* OrderStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStartViewController.swift; sourceTree = "<group>"; };
+		F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		F781C30025776E900005D3E8 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		F79E72BB2570A89F005EF62B /* Orderman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79E72BE2570A89F005EF62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79E72C02570A89F005EF62B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F781C3112577948F0005D3E8 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				F781C30025776E900005D3E8 /* Order.storyboard */,
+				F76EB73125753CEA00123E67 /* OrderStartViewController.swift */,
+				F79E72C22570A89F005EF62B /* OrderViewController.swift */,
+				F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		F79E72B22570A89F005EF62B = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +160,8 @@
 			children = (
 				F79E72BE2570A89F005EF62B /* AppDelegate.swift */,
 				F79E72C02570A89F005EF62B /* SceneDelegate.swift */,
-				F79E72FD2570C194005EF62B /* Views */,
+				F79E72CC2570A8AA005EF62B /* LaunchScreen.storyboard */,
+				F79E72C42570A89F005EF62B /* Main.storyboard */,
 				F79E72FC2570C188005EF62B /* Controllers */,
 				F79E72CA2570A8AA005EF62B /* Assets.xcassets */,
 				F79E72CF2570A8AA005EF62B /* Info.plist */,
@@ -175,27 +191,9 @@
 		F79E72FC2570C188005EF62B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F79E72C22570A89F005EF62B /* OrderViewController.swift */,
-				F76EB73125753CEA00123E67 /* MainViewController.swift */,
+				F781C3112577948F0005D3E8 /* Order */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F79E72FD2570C194005EF62B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F79E72FE2570C1B4005EF62B /* Stroyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		F79E72FE2570C1B4005EF62B /* Stroyboard */ = {
-			isa = PBXGroup;
-			children = (
-				F79E72CC2570A8AA005EF62B /* LaunchScreen.storyboard */,
-				F79E72C42570A89F005EF62B /* Main.storyboard */,
-			);
-			path = Stroyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F781C30125776E900005D3E8 /* Order.storyboard in Resources */,
 				F79E72CE2570A8AA005EF62B /* LaunchScreen.storyboard in Resources */,
 				F79E72CB2570A8AA005EF62B /* Assets.xcassets in Resources */,
 				F79E72C62570A89F005EF62B /* Main.storyboard in Resources */,
@@ -436,11 +435,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F781C2F4257769DC0005D3E8 /* OrderDetailViewController.swift in Sources */,
 				F79E72C32570A89F005EF62B /* OrderViewController.swift in Sources */,
 				F79E72C92570A89F005EF62B /* GreateKolkata.xcdatamodeld in Sources */,
 				F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */,
 				F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */,
-				F76EB73225753CEA00123E67 /* MainViewController.swift in Sources */,
+				F76EB73225753CEA00123E67 /* OrderStartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

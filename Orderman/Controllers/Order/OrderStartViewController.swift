@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  OrderStartViewController.swift
 //  Orderman
 //
 //  Created by kimjunseong on 2020/11/30.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class OrderStartViewController: UIViewController {
 
     private var manNumber = 0
     private var womanNumber = 0
@@ -28,6 +28,12 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     @IBAction func segmentTouched(_ sender: UISegmentedControl) {
         orderWayLabel.text = sender.titleForSegment(at: sender.selectedSegmentIndex)
         orderWayLabel.textColor = .black
@@ -40,7 +46,11 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func numberTouched(_ sender: UIButton) {
-        tableNumberField.text = sender.title(for: .normal)
+        guard let number = tableNumberField.text, number.count > 1 else {
+            return
+        }
+        
+        tableNumberField.text = number + sender.title(for: .normal)!
     }
     
     @IBAction func peopleCountButtonTouched(_ sender: UIButton) {
@@ -100,27 +110,26 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func orderButtonTouched(_ sender: UIButton) {
-        let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-        tabBarController.modalPresentationStyle = .fullScreen
- 
-        let orderVC = tabBarController.viewControllers?[0].children[0] as! OrderViewController
+        let storyboard = UIStoryboard(name: "Order", bundle: nil)
+        let orderVC = storyboard.instantiateViewController(withIdentifier: "OrderVC") as! OrderViewController
         orderVC.delegate = self
 
-        present(tabBarController, animated: false, completion: nil)
+        navigationController?.pushViewController(orderVC, animated: true)
     }
 }
 
-extension MainViewController: OrderViewControllerDelegate {
+extension OrderStartViewController: OrderViewControllerDelegate {
     func getOrderTitle() -> String {
         var entireLabel = ""
         if let tableField = tableNumberField.text,
            var orderLabel = orderWayLabel.text,
            var manLabel = orderManLabel.text,
            var womanLabel = orderWomanLabel.text {
-            if tableField != "" {
+            
+            if tableField != "", segmentControl.selectedSegmentIndex == 0 {
                 entireLabel.append("\(tableField) ")
             }
-            
+        
             if orderLabel == "注文種類＆人数" {
                 orderLabel = "種類未選択"
             }
