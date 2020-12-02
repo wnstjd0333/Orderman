@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C3D2506D2F0AD2BEC400C8D /* Pods_OrdermanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */; };
+		40623A5A25773E5A008144DC /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40623A5925773E5A008144DC /* Setting.storyboard */; };
+		40623A5F25773E70008144DC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40623A5E25773E70008144DC /* SettingViewController.swift */; };
+		408545D0257797E000A67C80 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408545CF257797E000A67C80 /* OrderViewController.swift */; };
 		4FDA355F0C032434F1C34F8E /* Pods_Orderman_OrdermanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */; };
 		D41BFA9E90DC6C578385D27D /* Pods_Orderman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */; };
 		F76EB73225753CEA00123E67 /* OrderStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EB73125753CEA00123E67 /* OrderStartViewController.swift */; };
@@ -15,7 +18,6 @@
 		F781C30125776E900005D3E8 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F781C30025776E900005D3E8 /* Order.storyboard */; };
 		F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72BE2570A89F005EF62B /* AppDelegate.swift */; };
 		F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C02570A89F005EF62B /* SceneDelegate.swift */; };
-		F79E72C32570A89F005EF62B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C22570A89F005EF62B /* OrderViewController.swift */; };
 		F79E72C62570A89F005EF62B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79E72C42570A89F005EF62B /* Main.storyboard */; };
 		F79E72C92570A89F005EF62B /* GreateKolkata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C72570A89F005EF62B /* GreateKolkata.xcdatamodeld */; };
 		F79E72CB2570A8AA005EF62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79E72CA2570A8AA005EF62B /* Assets.xcassets */; };
@@ -46,6 +48,9 @@
 		2450DA1FC3171D035C0D0CA2 /* Pods-Orderman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman.debug.xcconfig"; path = "Target Support Files/Pods-Orderman/Pods-Orderman.debug.xcconfig"; sourceTree = "<group>"; };
 		336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrdermanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderman_OrdermanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40623A5925773E5A008144DC /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		40623A5E25773E70008144DC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		408545CF257797E000A67C80 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orderman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA37EDD823C5ACDACEDEECC8 /* Pods-OrdermanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrdermanTests.release.xcconfig"; path = "Target Support Files/Pods-OrdermanTests/Pods-OrdermanTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFA048AA6BFC8A114205FA45 /* Pods-Orderman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orderman.release.xcconfig"; path = "Target Support Files/Pods-Orderman/Pods-Orderman.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,7 +62,6 @@
 		F79E72BB2570A89F005EF62B /* Orderman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79E72BE2570A89F005EF62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79E72C02570A89F005EF62B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F79E72C22570A89F005EF62B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		F79E72C52570A89F005EF62B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F79E72C82570A89F005EF62B /* GreateKolkata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GreateKolkata.xcdatamodel; sourceTree = "<group>"; };
 		F79E72CA2570A8AA005EF62B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,12 +126,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		40623A63257743E2008144DC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				40623A5925773E5A008144DC /* Setting.storyboard */,
+				40623A5E25773E70008144DC /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		F781C3112577948F0005D3E8 /* Order */ = {
 			isa = PBXGroup;
 			children = (
 				F781C30025776E900005D3E8 /* Order.storyboard */,
 				F76EB73125753CEA00123E67 /* OrderStartViewController.swift */,
-				F79E72C22570A89F005EF62B /* OrderViewController.swift */,
+				408545CF257797E000A67C80 /* OrderViewController.swift */,
 				F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */,
 			);
 			path = Order;
@@ -192,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				F781C3112577948F0005D3E8 /* Order */,
+				40623A63257743E2008144DC /* Setting */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +222,7 @@
 				F79E72B82570A89F005EF62B /* Frameworks */,
 				F79E72B92570A89F005EF62B /* Resources */,
 				F84F1AB1E42CA51B8FE9DC39 /* [CP] Embed Pods Frameworks */,
+				40623A21257738AF008144DC /* [CP] SettingKit */,
 			);
 			buildRules = (
 			);
@@ -308,6 +323,7 @@
 				F79E72CE2570A8AA005EF62B /* LaunchScreen.storyboard in Resources */,
 				F79E72CB2570A8AA005EF62B /* Assets.xcassets in Resources */,
 				F79E72C62570A89F005EF62B /* Main.storyboard in Resources */,
+				40623A5A25773E5A008144DC /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +344,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		40623A21257738AF008144DC /* [CP] SettingKit */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Orderman/Settings.bundle/Root.plist",
+			);
+			name = "[CP] SettingKit";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Orderman/Settings.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nPATH=$(bash -l -c 'echo $PATH')\n$PODS_ROOT/SettingsKit/build -p $PROJECT_FILE_PATH -s $SCRIPT_INPUT_FILE_0 -o $SCRIPT_OUTPUT_FILE_0\n";
+		};
 		791F742CA82E7F45BDFB32A2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,8 +472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F781C2F4257769DC0005D3E8 /* OrderDetailViewController.swift in Sources */,
-				F79E72C32570A89F005EF62B /* OrderViewController.swift in Sources */,
+				40623A5F25773E70008144DC /* SettingViewController.swift in Sources */,
 				F79E72C92570A89F005EF62B /* GreateKolkata.xcdatamodeld in Sources */,
+				408545D0257797E000A67C80 /* OrderViewController.swift in Sources */,
 				F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */,
 				F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */,
 				F76EB73225753CEA00123E67 /* OrderStartViewController.swift in Sources */,
@@ -546,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -601,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -660,7 +697,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UW3394MF3;
 				INFOPLIST_FILE = GreateKolkataTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -683,7 +719,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UW3394MF3;
 				INFOPLIST_FILE = GreateKolkataTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,7 +736,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E542E0D5C56BC51718691C1D /* Pods-Orderman-OrdermanUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UW3394MF3;
 				INFOPLIST_FILE = GreateKolkataUITests/Info.plist;
@@ -722,7 +757,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE924F98CDBC38440E663834 /* Pods-Orderman-OrdermanUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UW3394MF3;
 				INFOPLIST_FILE = GreateKolkataUITests/Info.plist;
