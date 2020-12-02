@@ -16,6 +16,7 @@
 		F76EB73225753CEA00123E67 /* OrderStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EB73125753CEA00123E67 /* OrderStartViewController.swift */; };
 		F781C2F4257769DC0005D3E8 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */; };
 		F781C30125776E900005D3E8 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F781C30025776E900005D3E8 /* Order.storyboard */; };
+		F781C3202577993B0005D3E8 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F781C31F2577993B0005D3E8 /* History.storyboard */; };
 		F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72BE2570A89F005EF62B /* AppDelegate.swift */; };
 		F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C02570A89F005EF62B /* SceneDelegate.swift */; };
 		F79E72C62570A89F005EF62B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79E72C42570A89F005EF62B /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		F76EB73125753CEA00123E67 /* OrderStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStartViewController.swift; sourceTree = "<group>"; };
 		F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		F781C30025776E900005D3E8 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		F781C31F2577993B0005D3E8 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		F79E72BB2570A89F005EF62B /* Orderman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79E72BE2570A89F005EF62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79E72C02570A89F005EF62B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = Order;
 			sourceTree = "<group>";
 		};
+		F781C315257798CD0005D3E8 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F781C31F2577993B0005D3E8 /* History.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		F79E72B22570A89F005EF62B = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		F79E72FC2570C188005EF62B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F781C315257798CD0005D3E8 /* History */,
 				F781C3112577948F0005D3E8 /* Order */,
 				40623A63257743E2008144DC /* Setting */,
 			);
@@ -222,7 +233,6 @@
 				F79E72B82570A89F005EF62B /* Frameworks */,
 				F79E72B92570A89F005EF62B /* Resources */,
 				F84F1AB1E42CA51B8FE9DC39 /* [CP] Embed Pods Frameworks */,
-				40623A21257738AF008144DC /* [CP] SettingKit */,
 			);
 			buildRules = (
 			);
@@ -324,6 +334,7 @@
 				F79E72CB2570A8AA005EF62B /* Assets.xcassets in Resources */,
 				F79E72C62570A89F005EF62B /* Main.storyboard in Resources */,
 				40623A5A25773E5A008144DC /* Setting.storyboard in Resources */,
+				F781C3202577993B0005D3E8 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,26 +355,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40623A21257738AF008144DC /* [CP] SettingKit */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Orderman/Settings.bundle/Root.plist",
-			);
-			name = "[CP] SettingKit";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(SRCROOT)/Orderman/Settings.swift",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nPATH=$(bash -l -c 'echo $PATH')\n$PODS_ROOT/SettingsKit/build -p $PROJECT_FILE_PATH -s $SCRIPT_INPUT_FILE_0 -o $SCRIPT_OUTPUT_FILE_0\n";
-		};
 		791F742CA82E7F45BDFB32A2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
