@@ -7,7 +7,6 @@ target 'Orderman' do
 
   # Pods for Orderman
   pod 'RealmSwift'
-  pod "SettingsKit"
 
 
   target 'OrdermanTests' do

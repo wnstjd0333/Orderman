@@ -4,23 +4,19 @@ PODS:
   - Realm/Headers (10.1.4)
   - RealmSwift (10.1.4):
     - Realm (= 10.1.4)
-  - SettingsKit (0.1.0)
 
 DEPENDENCIES:
   - RealmSwift
-  - SettingsKit
 
 SPEC REPOS:
   trunk:
     - Realm
     - RealmSwift
-    - SettingsKit
 
 SPEC CHECKSUMS:
   Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
   RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
-  SettingsKit: a682389b9bf71bfa897bd93bd667c4b2a731e321
 
-PODFILE CHECKSUM: 09007ed4f560f0b57b2e3b38e62159713faaf73b
+PODFILE CHECKSUM: 358ef56791b5393c455673842e2f6bef71af70d9
 
 COCOAPODS: 1.10.0
