@@ -26,6 +26,7 @@ class OrderStartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        APITest().test()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -17,6 +17,11 @@
 		F781C2F4257769DC0005D3E8 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */; };
 		F781C30125776E900005D3E8 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F781C30025776E900005D3E8 /* Order.storyboard */; };
 		F781C3202577993B0005D3E8 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F781C31F2577993B0005D3E8 /* History.storyboard */; };
+		F781C3C5257893200005D3E8 /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781C3C4257893200005D3E8 /* APITest.swift */; };
+		F781C3D72578A7690005D3E8 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F781C3BF257892FE0005D3E8 /* ExternalAccessory.framework */; };
+		F781C3D82578A7730005D3E8 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F781C3BA257892F40005D3E8 /* libxml2.2.tbd */; };
+		F781C3F62578AABA0005D3E8 /* libeposeasyselect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F781C3F42578AABA0005D3E8 /* libeposeasyselect.a */; };
+		F781C3F72578AABA0005D3E8 /* libepos2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F781C3F52578AABA0005D3E8 /* libepos2.a */; };
 		F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72BE2570A89F005EF62B /* AppDelegate.swift */; };
 		F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E72C02570A89F005EF62B /* SceneDelegate.swift */; };
 		F79E72C62570A89F005EF62B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79E72C42570A89F005EF62B /* Main.storyboard */; };
@@ -61,6 +66,14 @@
 		F781C2F3257769DC0005D3E8 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		F781C30025776E900005D3E8 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		F781C31F2577993B0005D3E8 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		F781C3A7257891E80005D3E8 /* ePOSEasySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ePOSEasySelect.h; sourceTree = "<group>"; };
+		F781C3A8257891E80005D3E8 /* ePOS2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ePOS2.h; sourceTree = "<group>"; };
+		F781C3B1257892570005D3E8 /* Orderman-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Orderman-Bridging-Header.h"; sourceTree = "<group>"; };
+		F781C3BA257892F40005D3E8 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		F781C3BF257892FE0005D3E8 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		F781C3C4257893200005D3E8 /* APITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
+		F781C3F42578AABA0005D3E8 /* libeposeasyselect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libeposeasyselect.a; path = Orderman/EpsonSDK/libeposeasyselect.a; sourceTree = "<group>"; };
+		F781C3F52578AABA0005D3E8 /* libepos2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libepos2.a; path = Orderman/EpsonSDK/libepos2.a; sourceTree = "<group>"; };
 		F79E72BB2570A89F005EF62B /* Orderman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orderman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79E72BE2570A89F005EF62B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79E72C02570A89F005EF62B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +95,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F781C3D82578A7730005D3E8 /* libxml2.2.tbd in Frameworks */,
+				F781C3F72578AABA0005D3E8 /* libepos2.a in Frameworks */,
+				F781C3D72578A7690005D3E8 /* ExternalAccessory.framework in Frameworks */,
+				F781C3F62578AABA0005D3E8 /* libeposeasyselect.a in Frameworks */,
 				D41BFA9E90DC6C578385D27D /* Pods_Orderman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +125,10 @@
 		19735314068F79852E418AF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F781C3F52578AABA0005D3E8 /* libepos2.a */,
+				F781C3F42578AABA0005D3E8 /* libeposeasyselect.a */,
+				F781C3BF257892FE0005D3E8 /* ExternalAccessory.framework */,
+				F781C3BA257892F40005D3E8 /* libxml2.2.tbd */,
 				8E5F0F54466FD81D16EA8A11 /* Pods_Orderman.framework */,
 				383E601E27003720C28F4208 /* Pods_Orderman_OrdermanUITests.framework */,
 				336D809A31AAEF4AEB106E68 /* Pods_OrdermanTests.framework */,
@@ -156,6 +177,24 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		F781C3A6257891D00005D3E8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F781C3C4257893200005D3E8 /* APITest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F781C3AD2578920B0005D3E8 /* EpsonSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F781C3A8257891E80005D3E8 /* ePOS2.h */,
+				F781C3A7257891E80005D3E8 /* ePOSEasySelect.h */,
+				F781C3B1257892570005D3E8 /* Orderman-Bridging-Header.h */,
+			);
+			path = EpsonSDK;
+			sourceTree = "<group>";
+		};
 		F79E72B22570A89F005EF62B = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +224,9 @@
 				F79E72C02570A89F005EF62B /* SceneDelegate.swift */,
 				F79E72CC2570A8AA005EF62B /* LaunchScreen.storyboard */,
 				F79E72C42570A89F005EF62B /* Main.storyboard */,
+				F781C3AD2578920B0005D3E8 /* EpsonSDK */,
 				F79E72FC2570C188005EF62B /* Controllers */,
+				F781C3A6257891D00005D3E8 /* API */,
 				F79E72CA2570A8AA005EF62B /* Assets.xcassets */,
 				F79E72CF2570A8AA005EF62B /* Info.plist */,
 				F79E72C72570A89F005EF62B /* GreateKolkata.xcdatamodeld */,
@@ -293,6 +334,7 @@
 				TargetAttributes = {
 					F79E72BA2570A89F005EF62B = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					F79E72D32570A8AA005EF62B = {
 						CreatedOnToolsVersion = 12.2;
@@ -467,6 +509,7 @@
 				F79E72C92570A89F005EF62B /* GreateKolkata.xcdatamodeld in Sources */,
 				408545D0257797E000A67C80 /* OrderViewController.swift in Sources */,
 				F79E72BF2570A89F005EF62B /* AppDelegate.swift in Sources */,
+				F781C3C5257893200005D3E8 /* APITest.swift in Sources */,
 				F79E72C12570A89F005EF62B /* SceneDelegate.swift in Sources */,
 				F76EB73225753CEA00123E67 /* OrderStartViewController.swift in Sources */,
 			);
@@ -645,6 +688,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UW3394MF3;
 				INFOPLIST_FILE = Orderman/Info.plist;
@@ -652,8 +696,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Orderman/EpsonSDK",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.archive.Orderman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Orderman/EpsonSDK/Orderman-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -665,6 +716,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UW3394MF3;
 				INFOPLIST_FILE = Orderman/Info.plist;
@@ -672,8 +724,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Orderman/EpsonSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.archive.Orderman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Orderman/EpsonSDK/Orderman-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
