@@ -12,6 +12,7 @@ class SettingViewController: UIViewController {
     enum SettingMenu: Int {
         case category
         case menu
+        case option
         case print
         case logout
         
@@ -25,6 +26,7 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "設定"
     }
     
 
@@ -51,7 +53,7 @@ extension SettingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for:indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingDefaultCell", for:indexPath)
         cell.accessoryType = .detailButton
         
         cell.textLabel?.text = "aaaa"
